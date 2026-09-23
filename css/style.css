@@ -1,0 +1,417 @@
+:root {
+    --blue-dark: #0f2942;
+    --blue-mid: #1a5fa8;
+    --blue-light: #4aa8e0;
+
+    --text: #2b2f38;
+    --text-muted: #4b5563;
+
+    --bg: #ffffff;
+
+    --shadow: 0 2px 12px rgba(15, 41, 66, 0.06);
+
+    --header-h: 78px;
+}
+
+
+/* ==============================
+   RESET
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: #f7f9fb;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: var(--header-h);
+
+    background: var(--bg);
+
+    box-shadow: var(--shadow);
+
+    z-index: 1000;
+}
+
+
+/* ==============================
+   NAV CONTAINER
+================================= */
+
+.nav-container {
+    max-width: 1300px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   LOGO
+================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.logo-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+
+.logo-text .name {
+    font-weight: 700;
+
+    font-size: 15px;
+
+    letter-spacing: 0.5px;
+
+    color: #000000;
+}
+
+
+
+.logo-text .name span {
+    color: #003B63;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================= */
+
+nav.main-nav {
+    display: flex;
+}
+
+
+nav.main-nav ul {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+nav.main-nav a {
+    text-decoration: none;
+
+    color: var(--text-muted);
+
+    font-size: 15.5px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    padding: 8px 2px;
+
+    position: relative;
+
+    transition: color 0.2s ease;
+}
+
+
+nav.main-nav a:hover {
+    color: var(--blue-mid);
+}
+
+
+nav.main-nav a.active {
+    color: var(--blue-mid);
+
+    font-weight: 600;
+}
+
+
+nav.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -24px;
+
+    height: 3px;
+
+    background: var(--blue-mid);
+
+    border-radius: 2px;
+}
+
+
+/* ==============================
+   BURGER
+================================= */
+
+.burger {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 8px;
+
+    z-index: 1001;
+}
+
+
+.burger span {
+    width: 26px;
+
+    height: 2.5px;
+
+    background: var(--blue-dark);
+
+    border-radius: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Animation burger */
+
+.burger.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.burger.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+/* ==============================
+   TABLETTE
+================================= */
+
+@media (max-width: 900px) {
+
+    nav.main-nav ul {
+        gap: 22px;
+    }
+
+    nav.main-nav a {
+        font-size: 14.5px;
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+
+    nav.main-nav {
+
+        position: fixed;
+
+        top: var(--header-h);
+
+        left: 0;
+        right: 0;
+
+        background: var(--bg);
+
+        box-shadow: var(--shadow);
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        transition: max-height 0.35s ease;
+    }
+
+
+    nav.main-nav.open {
+        max-height: 500px;
+    }
+
+
+    nav.main-nav ul {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 10px 30px 20px;
+    }
+
+
+    nav.main-nav ul li {
+
+        width: 100%;
+
+        border-bottom: 1px solid #eef1f4;
+    }
+
+
+    nav.main-nav a {
+
+        display: block;
+
+        padding: 14px 0;
+
+        width: 100%;
+    }
+
+
+    nav.main-nav a.active::after {
+        display: none;
+    }
+
+}
+
+
+/* ==============================
+   PETIT MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .nav-container {
+        padding: 0 18px;
+    }
+
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .logo-text .name {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==============================
+   CONTENU GENERIQUE (pages sans layout dédié)
+================================= */
+
+main {
+
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 60px 30px;
+}
+
+
+main h1 {
+
+    font-size: clamp(28px, 4vw, 44px);
+
+    color: var(--blue-dark);
+
+    margin-bottom: 16px;
+}
+
+
+main p {
+
+    color: var(--text-muted);
+
+    max-width: 640px;
+
+    line-height: 1.6;
+}
+
+
+main section {
+
+    margin-top: 60px;
+
+    padding: 40px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+}
+
+
+main section h2 {
+    color: var(--blue-dark);
+
+    margin-bottom: 15px;
+}
