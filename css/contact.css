@@ -29,6 +29,7 @@
 }
 
 
+
 .hero-inner {
     position: relative;
 
@@ -90,6 +91,44 @@
     margin: 0 auto;
 }
 
+
+.hero-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 950px;
+
+    height: auto;
+    object-fit: cover;
+
+    opacity: 0.22;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .hero-img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-img {
+        width: 110%;
+        opacity: 0.18;
+    }
+}
 
 /* ==============================
    SECTION "RESTONS EN CONTACT"
@@ -841,6 +880,7 @@
 }
 
 
+
 @media (max-width: 560px) {
 
     .cards-grid {
@@ -876,4 +916,64 @@
         text-align: center;
     }
 
+
+
+    
+}
+
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ---------- Liens Navigation & Services ---------- */
+
+.footer-col ul a {
+    position: relative;
+
+    display: inline-block;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    padding-left: 0;
+
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-col ul a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--blue-light);
+
+    transition: width 0.25s ease;
+}
+
+
+.footer-col ul a:hover {
+    color: var(--blue-light);
+
+    padding-left: 8px;
+}
+
+.footer-col ul a:hover::after {
+    width: 100%;
 }
