@@ -639,9 +639,10 @@
 .site-footer {
     position: relative;
 
-    margin-top: 40px;
+    margin-top: 0px;
 
     padding: 90px 24px 30px;
+    z-index: 2; /* passe au-dessus de sect-cta pour que le clip-path fonctionne bien */
 
     background: linear-gradient(180deg, #16283e 0%, #0b1622 100%);
 
