@@ -4,10 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SinusTic</title>
+  <title>À Propos | CACI-TOGO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/apropos.css">
   <link rel="stylesheet" href="css/contact.css">
+
 </head>
 
 <body>
@@ -20,7 +28,7 @@
 
         <img
           src="https://media.licdn.com/dms/image/v2/C4D0BAQFPcfWF0URfQA/company-logo_200_200/company-logo_200_200/0/1655749647311?e=2147483647&v=beta&t=Ktuzf3geCWTZr3ow4CffbP1-qL3cy4fX7v73MraVp5M"
-          alt="SinusTic" class="logo-image">
+          alt="CACI-TOGO" class="logo-image">
 
         <div class="logo-text">
           <span class="name">
@@ -30,14 +38,12 @@
 
       </a>
 
-
       <!-- Burger mobile -->
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
 
       <!-- Navigation -->
       <nav class="main-nav" id="mainNav">
@@ -48,15 +54,15 @@
           </li>
 
           <li>
+            <a href="apropos.html">À Propos</a>
+          </li>
+
+          <li>
             <a href="services.html">Services</a>
           </li>
 
           <li>
             <a href="secteurs.html">Secteurs</a>
-          </li>
-
-          <li>
-            <a href="apropos.html">À Propos</a>
           </li>
 
           <li>
@@ -69,31 +75,83 @@
     </div>
   </header>
 
+  <!-- ---------- HERO SLIDER ---------- -->
+  <section class="home-hero" id="homeHero">
 
-  <!-- Contenu de la page -->
+    <div class="home-hero-slide is-active" data-slide="0">
+      <img src="A-commerce.jpg" alt="Affaires commerciales CACI-TOGO" class="home-hero-img">
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <span class="home-hero-badge">💼 AFFAIRES COMMERCIALES</span>
+        <h1>Sécurisez et développez vos activités commerciales</h1>
+        <a href="secteurs.html#affaires-commerciales" class="home-hero-btn">Découvrir ce pôle</a>
+      </div>
+    </div>
+
+    <div class="home-hero-slide" data-slide="1">
+      <img src="A-imm.png" alt="Immobilier CACI-TOGO" class="home-hero-img">
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <span class="home-hero-badge">🏠 IMMOBILIER</span>
+        <h1>Vos transactions et titres fonciers en toute sécurité</h1>
+        <a href="secteurs.html#immobiliere" class="home-hero-btn">Découvrir ce pôle</a>
+      </div>
+    </div>
+
+    <div class="home-hero-slide" data-slide="2">
+      <img src="A-call.png" alt="Tech CACI-TOGO" class="home-hero-img">
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <span class="home-hero-badge">💻 TECH</span>
+        <h1>L'innovation au service de votre réussite digitale</h1>
+        <a href="secteurs.html#tech" class="home-hero-btn">Découvrir ce pôle</a>
+      </div>
+    </div>
+
+    <div class="home-hero-slide" data-slide="3">
+      <img src="A-call.png" alt="Contact CACI-TOGO" class="home-hero-img">
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <span class="home-hero-badge">🤝 CONTACT</span>
+        <h1>Une équipe prête à vous accompagner</h1>
+        <a href="contact.html" class="home-hero-btn">Contactez-nous</a>
+      </div>
+    </div>
+
+    <button class="home-hero-arrow home-hero-prev" aria-label="Précédent">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6" />
+      </svg>
+    </button>
+    <button class="home-hero-arrow home-hero-next" aria-label="Suivant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6" />
+      </svg>
+    </button>
+
+    <div class="home-hero-dots">
+      <button class="home-hero-dot is-active" data-dot="0" aria-label="Slide 1"></button>
+      <button class="home-hero-dot" data-dot="1" aria-label="Slide 2"></button>
+      <button class="home-hero-dot" data-dot="2" aria-label="Slide 3"></button>
+      <button class="home-hero-dot" data-dot="3" aria-label="Slide 4"></button>
+    </div>
+
+  </section>
+
+  <!-- ---------- CONTENU ---------- -->
   <main>
-
-    <h1>Bienvenue chez SinusTic</h1>
-
-    <p>
-      Ceci est le contenu de la page, placé sous la barre de navigation.
-      Remplacez ce texte et les sections ci-dessous par votre contenu réel.
-    </p>
-
     <section>
-
       <h2>Section d'exemple</h2>
-
-      <p>
-        Ajoutez ici vos offres, services ou réalisations.
-      </p>
-
+      <p>Ajoutez ici vos offres, services ou réalisations.</p>
     </section>
-
   </main>
 
 
+  <script src="js/home.js"></script>
   <script src="js/script.js"></script>
+
 
 
   <!-- ---------- FOOTER ---------- -->
@@ -101,8 +159,8 @@
     <div class="footer-inner">
 
       <h2 class="footer-brand">CACI-<span>TOGO</span></h2>
-      <p class="footer-tagline">Votre partenaire de confiance pour vos démarches juridiques, administratives et
-        immobilières</p>
+      <p class="footer-tagline">Votre partenaire de confiance pour vos démarches juridiques, administratives
+        et immobilières</p>
 
       <div class="footer-columns">
 
@@ -110,13 +168,13 @@
           <h3>Navigation</h3>
           <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="#">Nos Offres</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Réalisations</a></li>
             <li><a href="apropos.html">À Propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="secteurs.html">Secteurs</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
 
         <div class="footer-col">
           <h3>Services</h3>
@@ -125,9 +183,9 @@
             <li><a href="#">Démarches administratives</a></li>
             <li><a href="#">Gestion immobilière</a></li>
             <li><a href="#">Courtage d'affaires</a></li>
+            <li><a href="#">Accompagnement digital &amp; tech</a></li>
           </ul>
         </div>
-
         <div class="footer-col footer-contact">
           <h3>Contact</h3>
           <p>
@@ -194,6 +252,32 @@
 
     </div>
   </footer>
+
+  <script src="js/secteurs-animations.js"></script>
+
+  <script src="js/script.js"></script>
+  <script>
+    (function () {
+      var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var items = document.querySelectorAll("[data-reveal]");
+
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        items.forEach(function (el) { el.classList.add("is-visible"); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      items.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
 
 </body>
 

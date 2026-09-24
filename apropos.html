@@ -2,177 +2,460 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contactez-nous | CACI-TOGO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | CACI-TOGO</title>
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apropos.css">
+    <link rel="stylesheet" href="css/contact.css">
+
 </head>
 
 <body>
 
-  <header>
-    <div class="nav-container">
+    <header>
+        <div class="nav-container">
 
-      <!-- Logo -->
-      <a href="index.html" class="logo">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
 
-        <img
-          src="https://media.licdn.com/dms/image/v2/C4D0BAQFPcfWF0URfQA/company-logo_200_200/company-logo_200_200/0/1655749647311?e=2147483647&v=beta&t=Ktuzf3geCWTZr3ow4CffbP1-qL3cy4fX7v73MraVp5M"
-          alt="CACI-TOGO" class="logo-image">
+                <img src="https://media.licdn.com/dms/image/v2/C4D0BAQFPcfWF0URfQA/company-logo_200_200/company-logo_200_200/0/1655749647311?e=2147483647&v=beta&t=Ktuzf3geCWTZr3ow4CffbP1-qL3cy4fX7v73MraVp5M"
+                    alt="CACI-TOGO" class="logo-image">
 
-        <div class="logo-text">
-          <span class="name">
-            CACI-<span>TOGO</span>
-          </span>
+                <div class="logo-text">
+                    <span class="name">
+                        CACI-<span>TOGO</span>
+                    </span>
+                </div>
+
+            </a>
+
+            <!-- Burger mobile -->
+            <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="main-nav" id="mainNav">
+
+                <ul>
+                    <li>
+                        <a href="index.html">Accueil</a>
+                    </li>
+
+                    <li>
+                        <a href="apropos.html" class="active">À Propos</a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="secteurs.html">Secteurs</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+
         </div>
-
-      </a>
-
-
-      <!-- Burger mobile -->
-      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    </header>
 
 
-      <!-- Navigation -->
-      <nav class="main-nav" id="mainNav">
+    <!-- ---------- HERO ---------- -->
+    <section class="about-hero">
+        <img src="A-propros.png" alt="Équipe CACI-TOGO" class="about-hero-img">
+        <div class="about-hero-inner">
 
-        <ul>
-          <li>
-            <a href="index.html">Accueil</a>
-          </li>
+            <span class="about-hero-badge">🤝 QUI SOMMES-NOUS</span>
+            <h1>Un cabinet à taille humaine, une exigence de grand cabinet</h1>
+            <p>CACI-TOGO accompagne entreprises et particuliers dans leurs démarches juridiques, administratives
+                et immobilières, avec la rigueur du droit et la proximité d'une équipe qui connaît vos dossiers.</p>
 
-          <li>
-            <a href="services.html">Services</a>
-          </li>
+            <div class="about-hero-stats">
+                <div class="about-hero-stat">
+                    <span class="about-hero-stat-num">3</span>
+                    <span class="about-hero-stat-label">Domaines d'expertise</span>
+                </div>
+                <div class="about-hero-stat-divider"></div>
+                <div class="about-hero-stat">
+                    <span class="about-hero-stat-num">100%</span>
+                    <span class="about-hero-stat-label">Dossiers suivis en interne</span>
+                </div>
+                <div class="about-hero-stat-divider"></div>
+                <div class="about-hero-stat">
+                    <span class="about-hero-stat-num">1ᵉʳ</span>
+                    <span class="about-hero-stat-label">Interlocuteur, du début à la fin</span>
+                </div>
+            </div>
 
-          <li>
-            <a href="secteurs.html">Secteurs</a>
-          </li>
+        </div>
+    </section>
 
-          <li>
-            <a href="apropos.html" class="active">À Propos</a>
-          </li>
-          </li>
 
-          <li>
-            <a href="contact.html" >Contact</a>
-          </li>
-        </ul>
+    <!-- ---------- NOTRE HISTOIRE ---------- -->
+    <section class="history" id="histoire" data-reveal>
+        <div class="history-inner">
 
-      </nav>
+            <div class="history-figure">
+                <svg viewBox="0 0 200 200" class="history-art" aria-hidden="true">
+                    <circle cx="100" cy="100" r="72" />
+                    <path d="M100 46v54l38 22" />
+                </svg>
+                <p class="history-figure-caption">Un accompagnement construit sur la durée</p>
+            </div>
 
-    </div>
-  </header>
+            <div class="history-content">
+                <span class="section-eyebrow">Notre histoire</span>
+                <h2>Née d'un constat simple</h2>
+                <p>Beaucoup de porteurs de projets et de propriétaires se retrouvent seuls face à la complexité
+                    des démarches juridiques, administratives et foncières. CACI-TOGO est né pour combler cet
+                    écart : offrir un accompagnement clair, rigoureux et accessible, du premier conseil jusqu'à
+                    la conclusion du dossier.</p>
 
+                <p>Depuis, le cabinet a fait le choix de rester concentré sur trois pôles qu'il maîtrise en
+                    profondeur — les affaires commerciales, l'immobilier, et un accompagnement technologique
+                    plus léger pour les projets qui le nécessitent — plutôt que de disperser son expertise.
+                    Une manière d'assurer, à chaque client, un interlocuteur qui comprend réellement son
+                    dossier.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ---------- MISSION ---------- -->
+    <section class="mission" id="mission" data-reveal>
+        <div class="mission-inner">
+
+            <div class="mission-content">
+                <span class="section-eyebrow">Notre mission</span>
+                <h2>Simplifier vos démarches</h2>
+                <p>Chez CACI-TOGO, notre mission est de rendre le droit, les démarches administratives et
+                    l'immobilier accessibles à tous nos clients, entreprises comme particuliers. Nous nous
+                    engageons à offrir un accompagnement rigoureux, transparent et personnalisé, à chaque
+                    étape de leurs projets.</p>
+
+                <div class="mission-points">
+
+                    <div class="mission-point">
+                        <div class="mission-point-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4Z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Rigueur</h3>
+                            <p>Nous appliquons la réglementation togolaise en vigueur avec précision, à chaque
+                                dossier.</p>
+                        </div>
+                    </div>
+
+                    <div class="mission-point">
+                        <div class="mission-point-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M4 21c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Confiance</h3>
+                            <p>Nous construisons des relations durables basées sur la transparence et la
+                                fiabilité.</p>
+                        </div>
+                    </div>
+
+                    <div class="mission-point">
+                        <div class="mission-point-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Excellence</h3>
+                            <p>Nous visons l'excellence dans chaque dossier, chaque démarche et chaque
+                                échange.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mission-visual">
+                <svg viewBox="0 0 24 24" class="mission-visual-icon" fill="none" stroke="#fff" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4Z" />
+                    <path d="M9 12l2 2 4-4" />
+                </svg>
+                <span>Sécuriser vos projets</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ---------- VALEURS ---------- -->
+    <section class="values" id="valeurs" data-reveal>
+        <div class="values-inner">
+            <span class="section-eyebrow">Nos valeurs</span>
+            <h2>Ce qui guide chacun de nos dossiers</h2>
+            <p class="values-intro">Les principes qui encadrent notre travail au quotidien</p>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4Z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Rigueur</h3>
+                    <p>Chaque dossier est traité avec précision, dans le respect strict de la réglementation en
+                        vigueur.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10Z" />
+                        </svg>
+                    </div>
+                    <h3>Confidentialité</h3>
+                    <p>Vos informations et les enjeux de votre dossier sont traités avec la plus grande
+                        discrétion.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5" />
+                        </svg>
+                    </div>
+                    <h3>Proximité</h3>
+                    <p>Un interlocuteur dédié vous accompagne du premier échange jusqu'à la conclusion du
+                        dossier.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+                        </svg>
+                    </div>
+                    <h3>Réactivité</h3>
+                    <p>Des délais annoncés clairement et un suivi régulier, pour ne jamais vous laisser sans
+                        réponse.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ---------- ÉQUIPE ---------- -->
+    <section class="team" id="equipe" data-reveal>
+        <div class="team-inner">
+            <span class="section-eyebrow">Notre équipe</span>
+            <h2>Les Responsables derrière vos dossiers</h2>
+            <p class="team-intro">Une équipe restreinte et impliquée, pour garantir à chaque client un suivi
+                personnel plutôt qu'un dossier parmi d'autres.</p>
+
+            <div class="team-grid">
+
+                <div class="team-card">
+                    <div class="team-avatar" style="--avatar-color:#164a78;">
+                        <img src="A-portrait.avif" alt="Nom Prénom">
+                    </div>
+                    <h3>Eric EHON</h3>
+                    <p class="team-role">Directeur général</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar" style="--avatar-color:#3d8fd6;">
+                        <img src="A-portrait.avif" alt="Nom Prénom">
+                    </div>
+                    <h3>Nom Prénom</h3>
+                    <p class="team-role">Rôle</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar" style="--avatar-color:#1c6aa8;">
+                        <img src="A-portrait.avif" alt="Nom Prénom">
+                    </div>
+                    <h3>Alassani Merveille</h3>
+                    <p class="team-role">Responsable informatique</p>
+                </div>
+
+
+                <div class="team-card">
+                    <div class="team-avatar" style="--avatar-color:#3d8fd6;">
+                        <img src="A-portrait.avif" alt="Nom Prénom">
+                    </div>
+                    <h3>Nom Prénom</h3>
+                    <p class="team-role">Rôle</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ---------- CTA FINALE ---------- -->
+    <section class="sect-cta" data-reveal>
+        <div class="sect-cta-inner">
+            <h2>Un projet dans l'un de ces domaines ?</h2>
+            <p>Présentez-nous votre dossier, nous vous orientons vers la personne qui saura vous accompagner.</p>
+            <a href="contact.html" class="sect-cta-btn">Contactez-nous</a>
+        </div>
+    </section>
 
     <!-- ---------- FOOTER ---------- -->
-  <footer class="site-footer">
-    <div class="footer-inner">
+    <footer class="site-footer">
+        <div class="footer-inner">
 
-      <h2 class="footer-brand">CACI-<span>TOGO</span></h2>
-      <p class="footer-tagline">Votre partenaire de confiance pour vos démarches juridiques, administratives et
-        immobilières</p>
+            <h2 class="footer-brand">CACI-<span>TOGO</span></h2>
+            <p class="footer-tagline">Votre partenaire de confiance pour vos démarches juridiques, administratives
+                et immobilières</p>
 
-      <div class="footer-columns">
+            <div class="footer-columns">
 
-        <div class="footer-col">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#">Nos Offres</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Réalisations</a></li>
-            <li><a href="apropos.html">À Propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À Propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="secteurs.html">Secteurs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Assistance &amp; consultation juridiques</a></li>
+                        <li><a href="#">Démarches administratives</a></li>
+                        <li><a href="#">Gestion immobilière</a></li>
+                        <li><a href="#">Courtage d'affaires</a></li>
+                        <li><a href="#">Accompagnement digital &amp; tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact</h3>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Adidogomé, 500 m de la maison des Jeunes d'Amadahomé, Lomé, Togo
+                    </p>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        (+228) 90 97 53 39
+                    </p>
+                    <p>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        contact@caci.tg
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.6.8-2.6 1a4 4 0 0 0-6.9 3.7A11.5 11.5 0 0 1 3.6 4.6a4 4 0 0 0 1.3 5.4c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.2 4a4 4 0 0 1-1.8.1 4 4 0 0 0 3.8 2.8A8 8 0 0 1 2 18.6a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.6 1.5-1.3 2-2.1z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.4 20.4h-3.5v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9.5V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.4 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1ZM7 20.4H3.6V9H7v11.4Z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.4.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.3.6-.6 1-1 1.5-.5.4-.9.7-1.5 1-.4.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.3-1-.6-1.5-1-.4-.5-.7-.9-1-1.5-.2-.4-.4-1.2-.5-2.4C2 15.6 2 15.2 2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.2.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.2-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2-.4-.3-.7-.5-1.2-.7-.3-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.7-2a1.1 1.1 0 1 1-2.1 0 1.1 1.1 0 0 1 2.1 0Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <p class="footer-bottom">© 2022 CACI-TOGO. Tous droits réservés.</p>
+
         </div>
+    </footer>
 
-        <div class="footer-col">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">Assistance &amp; consultation juridiques</a></li>
-            <li><a href="#">Démarches administratives</a></li>
-            <li><a href="#">Gestion immobilière</a></li>
-            <li><a href="#">Courtage d'affaires</a></li>
-          </ul>
-        </div>
+    <script src="js/secteurs-animations.js"></script>
 
-        <div class="footer-col footer-contact">
-          <h3>Contact</h3>
-          <p>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            Adidogomé, 500 m de la maison des Jeunes d'Amadahomé, Lomé, Togo
-          </p>
-          <p>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            (+228) 90 97 53 39
-          </p>
-          <p>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            contact@caci.tg
-          </p>
-        </div>
+    <script src="js/script.js"></script>
+    <script>
+        (function () {
+            var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            var items = document.querySelectorAll("[data-reveal]");
 
-      </div>
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                items.forEach(function (el) { el.classList.add("is-visible"); });
+                return;
+            }
 
-      <div class="footer-social">
-        <h3>Suivez-nous</h3>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Twitter">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.6.8-2.6 1a4 4 0 0 0-6.9 3.7A11.5 11.5 0 0 1 3.6 4.6a4 4 0 0 0 1.3 5.4c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.2 4a4 4 0 0 1-1.8.1 4 4 0 0 0 3.8 2.8A8 8 0 0 1 2 18.6a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.6 1.5-1.3 2-2.1z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20.4 20.4h-3.5v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9.5V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.4 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1ZM7 20.4H3.6V9H7v11.4Z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.4.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.3.6-.6 1-1 1.5-.5.4-.9.7-1.5 1-.4.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.3-1-.6-1.5-1-.4-.5-.7-.9-1-1.5-.2-.4-.4-1.2-.5-2.4C2 15.6 2 15.2 2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .4-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.2.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.2.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.2-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2-.4-.3-.7-.5-1.2-.7-.3-.2-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.7-2a1.1 1.1 0 1 1-2.1 0 1.1 1.1 0 0 1 2.1 0Z" />
-            </svg>
-          </a>
-        </div>
-      </div>
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
 
-      <hr class="footer-divider">
-
-      <p class="footer-bottom">© 2022 CACI-TOGO. Tous droits réservés.</p>
-
-    </div>
-  </footer>
-
-
-  <script src="js/script.js"></script>
-  <script src="js/contactscript.js"></script>
+            items.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
 
 </body>
 

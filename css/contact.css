@@ -978,3 +978,143 @@
 .footer-col ul a:hover::after {
     width: 100%;
 }
+
+
+/* ==============================
+   BLOBS ANIMÉS — fond hero
+================================= */
+
+.hero-blobs {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+}
+
+.blob-1 {
+    width: 320px;
+    height: 320px;
+    top: -80px;
+    left: -60px;
+    background: var(--blue-light, #3d8fd6);
+    animation: blobMove1 14s ease-in-out infinite;
+}
+
+.blob-2 {
+    width: 260px;
+    height: 260px;
+    bottom: -100px;
+    right: -40px;
+    background: #7fc4e8;
+    animation: blobMove2 18s ease-in-out infinite;
+}
+
+.blob-3 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    right: 20%;
+    background: #ffffff;
+    opacity: 0.08;
+    animation: blobMove3 10s ease-in-out infinite;
+}
+
+@keyframes blobMove1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, 30px) scale(1.15); }
+}
+
+@keyframes blobMove2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, -20px) scale(1.1); }
+}
+
+@keyframes blobMove3 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-25px, 15px); }
+}
+
+
+/* ==============================
+   RIPPLE — effet clic
+================================= */
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    pointer-events: none;
+    animation: rippleAnim 0.6s ease-out;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/* ==============================
+   REVEAL DRAMATIQUE — cards & cta-card
+================================= */
+
+.card {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    filter: blur(4px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                filter 0.7s ease,
+                box-shadow 0.25s ease;
+}
+
+.card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.cards-grid .card:nth-child(1) { transition-delay: 0s; }
+.cards-grid .card:nth-child(2) { transition-delay: 0.1s; }
+.cards-grid .card:nth-child(3) { transition-delay: 0.2s; }
+.cards-grid .card:nth-child(4) { transition-delay: 0.3s; }
+
+.cta-card {
+    opacity: 0;
+    transform: translateY(50px) scale(0.97);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+/* ==============================
+   TRANSITIONS — boutons magnétiques
+================================= */
+
+.cta-btn,
+.card .btn {
+    transition: transform 0.15s ease-out, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-blobs,
+    .blob {
+        display: none !important;
+    }
+}
