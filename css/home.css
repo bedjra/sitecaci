@@ -1,17 +1,16 @@
 /* =====================================================
    HERO SLIDER — page d'accueil
-   Réorganisé : plus de règles dupliquées, échelle
-   d'espacement cohérente, transitions plus douces.
+   Palette unifiée avec style.css (--blue-dark/--blue-mid/--blue-light)
    ===================================================== */
 
 .home-hero {
   position: relative;
   overflow: hidden;
 
-  height: min(560px, 80vh);
-  min-height: 400px;
+  height: min(420px, 60vh);
+  min-height: 420px;
 
-  background: #0d2740; /* évite un flash blanc avant chargement des images */
+  background: var(--blue-dark);
 }
 
 /* ---------- Slides ---------- */
@@ -22,7 +21,7 @@
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .home-hero-slide.is-active {
@@ -37,24 +36,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  transform: scale(1.06);
-  transition: transform 8s ease-out;
-}
-
-.home-hero-slide.is-active .home-hero-img {
-  transform: scale(1);
 }
 
 .home-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(13, 39, 64, 0.85) 0%,
-    rgba(22, 74, 120, 0.75) 45%,
-    rgba(28, 106, 168, 0.55) 100%
-  );
+  background: linear-gradient(100deg,
+      rgba(15, 41, 66, 0.82) 0%,
+      rgba(15, 41, 66, 0.55) 55%,
+      rgba(15, 41, 66, 0.3) 100%);
 }
 
 /* ---------- Contenu texte ---------- */
@@ -64,68 +54,70 @@
   z-index: 2;
 
   height: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
 
-  padding: 24px 60px;
+  padding: 0 60px;
 }
 
-.home-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+@media (min-width: 992px) {
+  .home-hero-content {
+    align-items: center;
+    text-align: center;
+  }
 
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  .home-hero h1 {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-  padding: 6px 16px;
-  border-radius: 999px;
-
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
+.home-hero-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: #fff;
-
-  margin-bottom: 18px;
+  color: var(--blue-light);
+  margin-bottom: 12px;
 }
 
 .home-hero h1 {
   font-family: var(--font-display, "Lora", serif);
-  font-size: clamp(24px, 3.6vw, 38px);
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 600;
+  line-height: 1.35;
   color: #fff;
-  max-width: 720px;
-  margin-bottom: 26px;
+  max-width: 560px;
+  margin-bottom: 22px;
 }
 
 .home-hero-btn {
   display: inline-block;
 
-  background: linear-gradient(120deg, var(--blue-mid, #1c6aa8), var(--blue-light, #3d8fd6));
-
-  color: #fff;
+  background: #fff;
+  color: var(--blue-dark);
   text-decoration: none;
 
-  padding: 13px 30px;
-  border-radius: 999px;
+  padding: 11px 24px;
+  border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
+  letter-spacing: 0.2px;
 
-  box-shadow: 0 10px 24px rgba(13, 39, 64, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .home-hero-btn:hover,
 .home-hero-btn:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(13, 39, 64, 0.42);
+  background: var(--blue-light);
+  color: #fff;
 }
 
 /* ---------- Flèches ---------- */
@@ -136,12 +128,12 @@
   transform: translateY(-50%);
   z-index: 3;
 
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
 
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
 
   color: #fff;
   display: flex;
@@ -149,43 +141,47 @@
   justify-content: center;
 
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease;
 }
 
 .home-hero-arrow:hover,
 .home-hero-arrow:focus-visible {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-50%) scale(1.06);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .home-hero-arrow svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
-.home-hero-prev { left: 20px; }
-.home-hero-next { right: 20px; }
+.home-hero-prev {
+  left: 20px;
+}
+
+.home-hero-next {
+  right: 20px;
+}
 
 /* ---------- Puces (dots) ---------- */
 
 .home-hero-dots {
   position: absolute;
-  bottom: 22px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .home-hero-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.4);
   border: none;
   cursor: pointer;
 
@@ -194,46 +190,628 @@
 
 .home-hero-dot.is-active {
   background: #fff;
-  width: 22px;
-  border-radius: 4px;
+  width: 18px;
+  border-radius: 3px;
 }
 
 /* ---------- Responsive ---------- */
 
 @media (max-width: 768px) {
   .home-hero-content {
-    padding: 24px 48px;
+    padding: 0 44px;
   }
 }
 
 @media (max-width: 560px) {
   .home-hero {
-    height: min(460px, 75vh);
-    min-height: 340px;
+    height: min(360px, 58vh);
+    min-height: 280px;
   }
 
   .home-hero-content {
-    padding: 20px 40px;
+    padding: 0 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-hero h1 {
+    max-width: none;
   }
 
   .home-hero-arrow {
-    width: 34px;
-    height: 34px;
-  }
-
-  .home-hero-arrow svg {
-    width: 16px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
   }
 }
 
-/* Respecte les préférences d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
-  .home-hero-img,
+
   .home-hero-slide,
   .home-hero-btn,
   .home-hero-arrow,
   .home-hero-dot {
     transition: none !important;
+  }
+}
+
+
+
+/* =====================================================
+   HOME SECTIONS
+   Même identité que le reste du site : --blue-dark /
+   --blue-mid / --blue-light / --text / --text-muted
+   (définis dans style.css). Un seul accent ajouté : l'or,
+   réservé aux numéros d'articles et au sceau.
+   ===================================================== */
+
+:root {
+  --gold: #b98b3e;
+  --surface-tint: #eef4fa;
+  --rule: rgba(15, 41, 66, 0.12);
+}
+
+.home-section-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-presentation h2,
+.home-domains h2,
+.home-why h2,
+.home-approach h2,
+.home-cta h2 {
+  font-family: var(--font-display, "Lora", serif);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.home-presentation p,
+.home-domains p,
+.home-why p,
+.home-approach p,
+.home-cta p {
+  color: var(--text-muted);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Présentation ---------- */
+
+.home-presentation {
+  padding: 90px 0;
+  background: var(--surface-tint);
+}
+
+.home-presentation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 48px;
+}
+
+.home-presentation-lead {
+  font-family: var(--font-display, "Lora", serif);
+  font-style: italic;
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 500;
+  color: var(--blue-dark);
+  line-height: 1.5;
+  grid-column: 1;
+}
+
+.home-presentation-grid::before {
+  content: "";
+  grid-column: 2;
+  background: var(--rule);
+}
+
+.home-presentation-body {
+  grid-column: 3;
+  align-self: center;
+}
+
+.home-presentation-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.home-link-arrow {
+  color: var(--blue-mid);
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.home-link-arrow:hover,
+.home-link-arrow:focus-visible {
+  color: var(--blue-dark);
+}
+
+/* ---------- Domaines — liste d'articles ---------- */
+
+.home-domains {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.home-domains h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  margin-bottom: 40px;
+}
+
+.home-articles {
+  border-top: 1px solid var(--rule);
+}
+
+.home-article-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 40px;
+  align-items: center;
+  gap: 28px;
+
+  padding: 30px 4px;
+  border-bottom: 1px solid var(--rule);
+
+  text-decoration: none;
+  color: inherit;
+
+  transition: padding-left 0.2s ease;
+}
+
+.home-article-row:hover,
+.home-article-row:focus-visible {
+  padding-left: 12px;
+}
+
+.home-article-num {
+  font-family: var(--font-display, "Lora", serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.3px;
+}
+
+.home-article-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.home-article-body p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.home-article-icon {
+  width: 22px;
+  height: 22px;
+  color: #c7d2db;
+  justify-self: end;
+  transition: color 0.2s ease;
+}
+
+.home-article-row:hover .home-article-icon,
+.home-article-row:focus-visible .home-article-icon {
+  color: var(--blue-mid);
+}
+
+/* ---------- Pourquoi CACI-TOGO ---------- */
+
+.home-why {
+  padding: 90px 0;
+  background: var(--surface-tint);
+}
+
+.home-why-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+}
+
+.home-why-head h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  margin-bottom: 12px;
+}
+
+.home-why-head p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.home-why-list {
+  border-top: 1px solid var(--rule);
+}
+
+.home-why-row {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+}
+
+.home-why-row h3 {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.home-why-row p {
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+/* =====================================================
+   ---------- Notre approche (compas circulaire) ----------
+   Bloc nettoyé : un seul jeu de règles, sans doublon.
+   Le badge de chaque étape est posé pile sur l'anneau,
+   le texte descend toujours vers l'extérieur/intérieur
+   du cercle donc il ne le recroise jamais, sur aucune
+   taille d'écran (desktop → mobile inclus).
+   ===================================================== */
+
+.home-approach {
+  padding: 20px 0;
+  background: var(--blue-dark);
+  height: 590px;
+}
+
+.home-approach h2 {
+  color: #fff;
+  font-size: clamp(24px, 3vw, 30px);
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.home-approach-compass {
+  position: relative;
+  width: min(100%, 460px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+/* Anneau reliant les 4 étapes */
+.home-approach-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84%;
+  height: 84%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.home-approach-flow {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.home-approach-flow-ne {
+  top: 8.5%;
+  right: 8.5%;
+  transform: rotate(45deg);
+}
+
+.home-approach-flow-se {
+  bottom: 8.5%;
+  right: 8.5%;
+  transform: rotate(135deg);
+}
+
+.home-approach-flow-sw {
+  bottom: 8.5%;
+  left: 8.5%;
+  transform: rotate(225deg);
+}
+
+.home-approach-flow-nw {
+  top: 8.5%;
+  left: 8.5%;
+  transform: rotate(315deg);
+}
+
+.home-approach-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  margin: 0;
+  max-width: 42%;
+
+  font-family: var(--font-display, "Lora", serif);
+  font-weight: 600;
+  font-size: clamp(16px, 4.2vw, 22px);
+  line-height: 1.3;
+  color: #fff;
+  text-align: center;
+}
+
+.home-approach-step {
+  position: absolute;
+  z-index: 2;
+  width: min(150px, 36%);
+  text-align: center;
+}
+
+.home-approach-step--w {
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -14px);
+}
+
+.home-approach-step--n {
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -14px);
+}
+
+.home-approach-step--e {
+  top: 50%;
+  left: 92%;
+  transform: translate(-50%, -14px);
+}
+
+.home-approach-step--s {
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -14px);
+}
+
+.home-approach-num {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-family: var(--font-display, "Lora", serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  background: var(--gold);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  margin: 0 auto 12px;
+}
+
+.home-approach-step h3 {
+  font-size: clamp(13.5px, 3.4vw, 16px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.home-approach-step p {
+  font-size: clamp(12px, 2.9vw, 13.5px);
+  line-height: 1.5;
+  color: #b9c8d6;
+}
+
+/* Petits écrans : le compas rétrécit mais garde la même forme
+   circulaire (pas de repli en liste), on resserre juste les
+   marges latérales du texte pour éviter tout débordement. */
+@media (max-width: 560px) {
+  .home-approach-compass {
+    width: min(100%, 320px);
+
+  }
+
+  .home-approach-step {
+    width: min(120px, 40%);
+    padding: 10Opx;
+
+  }
+
+  .home-approach-title {
+    max-width: 44%;
+    font-size: clamp(13px, 3.6vw, 16px);
+  }
+}
+
+/* ---------- CTA ---------- */
+
+.home-cta {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.home-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 48px;
+}
+
+.home-cta h2 {
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 16px;
+}
+
+.home-cta p {
+  font-size: 15.5px;
+  margin-bottom: 26px;
+  max-width: 380px;
+}
+
+.home-cta-btn {
+  display: inline-block;
+  background: var(--blue-mid);
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.home-cta-btn:hover,
+.home-cta-btn:focus-visible {
+  background: var(--blue-dark);
+}
+
+.home-seal {
+  width: 170px;
+  height: 170px;
+}
+
+.home-seal svg {
+  width: 100%;
+  height: 100%;
+  animation: seal-rotate 40s linear infinite;
+}
+
+.home-seal-ring {
+  fill: none;
+  stroke: var(--blue-light);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+
+.home-seal-mark {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.home-seal-text {
+  font-size: 8.6px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  fill: var(--blue-dark);
+}
+
+@keyframes seal-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Responsive (sections hors "Notre approche") ---------- */
+
+@media (max-width: 860px) {
+  .home-presentation-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .home-presentation-grid::before {
+    display: none;
+  }
+
+  .home-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-why-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .home-cta-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-cta p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-seal {
+    justify-self: center;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .home-presentation,
+  .home-domains,
+  .home-why,
+  .home-approach,
+  .home-cta {
+    padding: 100px 0;
+  }
+
+  .home-article-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .home-article-icon {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .home-seal svg {
+    animation: none;
+  }
+}
+
+.home-seal {
+  width: auto;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-seal svg {
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 560px) {
+  .home-seal svg {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media (max-width: 860px) {
+  .home-seal {
+    justify-content: center;
+    height: auto;
   }
 }
