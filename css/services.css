@@ -17,12 +17,19 @@
 .serv-hero-img {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 37%;
     transform: translate(-50%, -50%);
+
     width: 90%;
     max-width: 950px;
-    opacity: 0.2;
+
+    height: auto;
+    object-fit: cover;
+
+    opacity: 0.55;
+
     z-index: 0;
+
     pointer-events: none;
 }
 
@@ -301,8 +308,8 @@
     opacity: 0.55;
     filter: blur(1px);
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.6s ease,
-                filter 0.6s ease;
+        opacity 0.6s ease,
+        filter 0.6s ease;
     will-change: transform, opacity;
 }
 
@@ -376,5 +383,190 @@
     }
 }
 
+/* ---------- NOTRE MÉTHODE — compas circulaire ---------- */
+
+.serv-approach {
+    padding: 90px 24px;
+    background: var(--blue-dark);
+}
+
+.serv-approach-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.serv-approach .section-eyebrow-light {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+
+.serv-approach-compass {
+    position: relative;
+    width: min(100%, 460px);
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+.serv-approach-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 84%;
+    height: 84%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.serv-approach-flow {
+    position: absolute;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.serv-approach-flow-ne { top: 8.5%; right: 8.5%; transform: rotate(45deg); }
+.serv-approach-flow-se { bottom: 8.5%; right: 8.5%; transform: rotate(135deg); }
+.serv-approach-flow-sw { bottom: 8.5%; left: 8.5%; transform: rotate(225deg); }
+.serv-approach-flow-nw { top: 8.5%; left: 8.5%; transform: rotate(315deg); }
+
+.serv-approach-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    margin: 0;
+    max-width: 42%;
+
+    font-family: var(--serv-font-display);
+    font-weight: 600;
+    font-size: clamp(16px, 4.2vw, 22px);
+    line-height: 1.3;
+    color: #fff;
+    text-align: center;
+}
+
+.serv-approach-step {
+    position: absolute;
+    z-index: 2;
+    width: min(150px, 36%);
+    text-align: center;
+}
+
+.serv-approach-step--w { top: 50%; left: 8%;  transform: translate(-50%, -14px); }
+.serv-approach-step--n { top: 8%;  left: 50%; transform: translate(-50%, -14px); }
+.serv-approach-step--e { top: 50%; left: 92%; transform: translate(-50%, -14px); }
+.serv-approach-step--s { top: 92%; left: 50%; transform: translate(-50%, -14px); }
+
+.serv-approach-num {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: var(--serv-font-display);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue-dark);
+    background: var(--gold, #d4af37);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 auto 12px;
+}
+
+.serv-approach-step h3 {
+    font-size: clamp(13.5px, 3.4vw, 16px);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.serv-approach-step p {
+    font-size: clamp(12px, 2.9vw, 13.5px);
+    line-height: 1.5;
+    color: #b9c8d6;
+}
+
+@media (max-width: 560px) {
+    .serv-approach-compass {
+        width: min(100%, 320px);
+    }
+
+    .serv-approach-step {
+        width: min(120px, 40%);
+        padding: 10px;
+    }
+
+    .serv-approach-title {
+        max-width: 44%;
+        font-size: clamp(13px, 3.6vw, 16px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .serv-approach [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 
 
+.serv-approach {
+    position: relative;
+    z-index: 2;
+
+    padding: 90px 24px 170px;
+
+    margin-bottom: -46px;
+
+    background: var(--blue-dark);
+
+    border-radius: 0 0 28px 28px;
+
+    overflow: hidden;
+}
+
+
+@media (max-width: 560px) {
+    .serv-approach {
+        padding-bottom: 200px;
+    }
+
+    .serv-approach-compass {
+        width: min(100%, 320px);
+    }
+
+    .serv-approach-step {
+        width: min(110px, 38%);
+        padding: 8px;
+    }
+
+    .serv-approach-step p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .serv-approach-title {
+        display: none;
+        max-width: 44%;
+        font-size: clamp(13px, 3.6vw, 16px);
+    }
+}
