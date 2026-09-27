@@ -305,7 +305,8 @@ nav.main-nav a.active::after {
 
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: center;
+        /* était: flex-start */
 
         gap: 0;
 
@@ -316,6 +317,9 @@ nav.main-nav a.active::after {
     nav.main-nav ul li {
 
         width: 100%;
+
+        text-align: center;
+        /* ajouté */
 
         border-bottom: 1px solid #eef1f4;
     }
@@ -336,7 +340,6 @@ nav.main-nav a.active::after {
     }
 
 }
-
 
 /* ==============================
    PETIT MOBILE
@@ -502,8 +505,3 @@ main section h2 {
 .main-nav .dropdown li a:hover {
     color: var(--blue-mid);
 }
-
-
-
-
-
